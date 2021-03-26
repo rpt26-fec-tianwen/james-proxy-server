@@ -1,0 +1,38 @@
+{
+  "name": "",
+  "version": "",
+  "description": "",
+  "author": "",
+  "license": "",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {
+    "start": "nodemon ./server/server.js",
+    "build": "webpack --watch",
+    "listen": "sudo lsof -i -P -n | grep LISTEN"
+  },
+  "dependencies": {
+    "@babel/core": "^7.13.10",
+    "axios": "^0.21.1",
+    "babel-loader": "^8.2.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "css-loader": "^5.1.0",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.24.4",
+    "webpack-cli": "^4.5.0"
+  }
+}
