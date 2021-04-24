@@ -1,12 +1,18 @@
 import React from 'react';
+import HeaderSearch from './HeaderSearch.jsx';
+import HeaderSubNav from './BottomHeaderDropDownComponents/BottomHeaderDropDown.jsx';
 const HeaderMenu = (props) => {
   const { styles } = props;
-  const { headerMenu, headerNav, headerNavItem, menuItem } = styles;
+  const { headerMenu, headerToggle, searchMobile, headerNav, headerNavItem, menuItem, headerDivider } = styles;
   return (
     <nav className={headerMenu}>
       <ul className={headerNav}>
         <li className={headerNavItem}>
-          <a className={menuItem}>Men</a>
+          <a className={menuItem} 
+          onMouseEnter={() => {document.getElementById('menSubNav').style.visibility = 'visible'}}
+          onMouseLeave={() => {document.getElementById('menSubNav').style.visibility = 'hidden'}}
+          >Men</a>
+          <HeaderSubNav style={styles}/>
         </li>
         <li className={headerNavItem}>
           <a className={menuItem}>Women</a>
@@ -21,6 +27,8 @@ const HeaderMenu = (props) => {
           <a className={menuItem}>Our Adventures</a>
         </li>
       </ul>
+      <hr className={headerDivider} />
+      <HeaderSearch style={styles}/>
     </nav>
   )
 }

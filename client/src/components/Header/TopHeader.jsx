@@ -34,15 +34,15 @@ const TopNavigationContainer = (props) => {
             <span>Store Locator</span>
           </a>
 
-          <a className={linkRoot}>
+          <a className={linkRoot} onClick={() => {document.getElementsByTagName('html')[0].style.marginTop = '513px'}}>
             <span className={`${regionCountry} ${topNavigation}`}>
               <span className={`${flagIcon} ${flagIconUs} ${regionCountryFlag}`}>
               </span>
               <span>
                 <span className={regionCountryTitle}>
-                  United States
+                  {" United States "}
                 <span className={regionCountryCurrency}>
-                    | $
+                     | $
                   </span>
                 </span>
               </span>

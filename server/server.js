@@ -2,30 +2,30 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const path = require('path');
-const router = require('./router.js');
-const bundleRouter = require('./bundleRouter.js');
+const router = require('./Routers/router.js');
+const bundleRouter = require('./Routers/bundleRouter.js');
 const axios = require('axios');
 
 app.use(cors());
 app.use(express.json())
 app.use('*', (req, res, next) => {
-  if (!req.originalUrl.match(/disable_hmr_logs.js/gm) && !(req.originalUrl).match(/\/fonts\//)) {
+  if (!req.originalUrl.match(/disable_hmr_logs.js/gm) && !(req.originalUrl).match(/(\/fonts\/) | (flagIcon) | (images) | (\/favicon.ico)/)) {
     console.log(req.method, req.originalUrl);
   }
 
   if ((/headBundle/g).test(req.originalUrl)) {
-    console.info('~Serving Client~')
+    console.info('~Serving Proxy Client~')
   }
-
+  console.log(req.query);
   if (req.query.service === 'card') {
-    console.info('~componentDidMount Marlon~')
+    console.info('\u001b[1;35m~componentDidMount Cards~');
   } else if (req.method === 'POST') {
-    console.info('~componentDidMount Gage~')
+    console.info('\u001b[1;35m~componentDidMount Gage~');
   } else if (req.query.service === 'related-products') {
-    console.info('~componentDidMount Melissa~')
+    console.info('\u001b[1;35m~componentDidMount Melissa~');
   } else if (req.query.service === 'details' && req.query.indicator !== 'activity') {
-    console.info('~componentDidMount James~')
-  }
+    console.info('\u001b[1;35m~componentDidMount James~');
+  } 
   next();
 });
 
