@@ -14,15 +14,22 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-  <link rel="stylesheet" type="text/css" href="app.css" />
+  <link rel="stylesheet" type="text/css" href="main.css" />
+  <title>Fjakeraven Online Store</title>
 </head>
 
 <body>
   <div id='site-root'>
+    <div id='region-root'></div>
     <div id='head'>
     </div>
+    <div id='header-search'>
+    </div>
+    <div id='cart-root'>
+    </div>
 
-    <div id='card-content'></div>
+    <div id='card-content'>
+    </div>
 
     <div id='detailsroot'>
     </div>
@@ -30,17 +37,17 @@
     <div id='related-products'>
     </div>
 
-    <div id='reviews'></div>
+    <div id='gageRoot'></div>
 
     <footer id='foot'>
     </footer>
   </div>
-  <!-- <script type='text/javascript' src='/cardbundle'></script> -->
-  <script type='text/javascript' src='/detailsbundle'></script>
-  <!-- <script type='text/javascript' src='/related-productsbundle'></script> -->
-  <!-- <script type='text/javascript' src='/reviewsbundle'></script> -->
-  <script type='text/javascript' src='/headBundle.js'></script>
 
+  <script type='text/javascript' src='/headBundle.js'></script>
+  <script type='text/javascript' src='/cardbundle'></script>
+  <script type='text/javascript' src='/detailsbundle'></script>
+  <script type='text/javascript' src='/related-products-bundle'></script>
+  <script type='text/javascript' src='/reviewsbundle'></script>
 </body>
 
 </html>

@@ -1,0 +1,15 @@
+#site-root {
+  background-color: red;
+  position: relative;
+  top: 0;
+  padding-top: 200px;
+  background-color: #f4f4f4;
+  -webkit-transition: top 0.5s ease-in-out;
+  transition: top 0.5s ease-in-out; }
+  @media only screen and (min-width: 768px) {
+    #site-root {
+      padding-top: 140px; } }
+  @media only screen and (min-width: 1300px) {
+    #site-root {
+      padding-top: 200px; } }
+

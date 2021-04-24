@@ -5,12 +5,13 @@ const path = require('path');
 
 const cardServiceIP = '';
 const detailsServiceIP = '3.138.79.75';
-const relatedProductsServiceIP = '';
-const reviewsServiceIP = '';
+const relatedProductsServiceIP = '3.129.111.96:8003/';
+const reviewsServiceIP = '54.183.205.73:8004';
 
 bundleRouter.get('/cardbundle', async (req, res, next) => {
     try {
-        const url = `http://${cardServiceIP}/dist/bundle.js`;
+        const url = `http://product-card.fjakeraven.com/dist/bundle.js`
+        // const url = `https://fjakeravenbundles.s3.us-east-2.amazonaws.com/card-bundle.js`;
         const results = await axios(url);
         res.status(200).send(results.data);
     } catch (err) {
@@ -21,6 +22,7 @@ bundleRouter.get('/cardbundle', async (req, res, next) => {
 bundleRouter.get('/detailsbundle', async (req, res) => {
     try {
         const url = `http://${detailsServiceIP}/bundle.js`;
+        // const url = `https://fjakeravenbundles.s3.us-east-2.amazonaws.com/bundle.js`;
         const results = await axios(url);
         res.status(200).send(results.data);
     } catch (err) {
@@ -28,7 +30,7 @@ bundleRouter.get('/detailsbundle', async (req, res) => {
     }
 });
 
-bundleRouter.get('/related-productsbundle', async (req, res, next) => {
+bundleRouter.get('/related-products-bundle', async (req, res, next) => {
     try {
         const url = `http://${relatedProductsServiceIP}/bundle.js`;
         const results = await axios(url);
