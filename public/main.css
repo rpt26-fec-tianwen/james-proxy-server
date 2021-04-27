@@ -13,3 +13,8 @@
     #site-root {
       padding-top: 200px; } }
 
+#related-products {
+  display: flex;
+  justify-content: center;
+  cursor: pointer; }
+

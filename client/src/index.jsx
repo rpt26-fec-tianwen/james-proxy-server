@@ -6,6 +6,7 @@ import RegionRoot from './components/RegionDropDown/RegionRoot.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import HeaderSearch from './components/Header/HeaderSearch.jsx'
 import CartRoot from './components/Header/Cart/CartRoot.jsx';
+import FlagRoot from './components/Flag/FlagRoot.jsx';
 import styles from './app.scss';
 import indexStyles from './styles/html.scss';
 
@@ -24,6 +25,10 @@ const HeaderSearchSection = () => {
 
 const CartRootSection = () => {
   return <CartRoot style={styles}/>
+}
+
+const FlagDetailsSection = () => {
+  return <FlagRoot style={styles}/>
 }
 
 const RegionSection = () => {
@@ -45,4 +50,5 @@ ReactDOM.render(<RegionSection />, document.getElementById('region-root'));
 ReactDOM.render(<IndexHead />, document.getElementById('head'));
 ReactDOM.render(<HeaderSearchSection/>, document.getElementById('header-search'));
 ReactDOM.render(<CartRootSection/>, document.getElementById('cart-root'))
+ReactDOM.render(<FlagDetailsSection/>, document.getElementById('flag-root'))
 ReactDOM.render(<IndexFoot />, document.getElementById('foot'));

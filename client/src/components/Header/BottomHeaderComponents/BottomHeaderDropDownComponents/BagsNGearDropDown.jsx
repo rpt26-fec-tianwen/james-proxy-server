@@ -4,96 +4,55 @@ export default (props) => {
     const { style } = props;
     const { headerSubNav, headerSubNavHolder, headerSubNav12, headerSubNav13, headerSubNavItem, menuItem, headerFeature } = style;
     return (
-        <div className={headerSubNav} id='menSubNav'>
+        <div className={headerSubNav} id='bagsNGearSubNav'>
             <div className={headerSubNavHolder} >
                 <ul className={headerSubNav12} >
                     <li className={headerSubNavItem}>
                         <a className={menuItem}>New Arrivals</a>
                     </li>
                     <li className={headerSubNavItem}>
-                        <a className={menuItem}>Jackets</a>
+                        <a className={menuItem}>Kanken</a>
                         <ul className={headerSubNav13}>
                             <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Outdoor Jackets '}</a>
+                                <a className={menuItem}>{' Kanken Bags '}</a>
                             </li>
                             <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Trekking Jackets '}</a>
+                                <a className={menuItem}>{' Kanken Accessories '}</a>
                             </li>
                             <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Shell Jackets '}</a>
-                            </li>
-                            <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Mountaineering Jackets '}</a>
-                            </li>
-                            <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Hunting Jackets '}</a>
-                            </li>
-                            <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Anoraks Jackets '}</a>
-                            </li>
-                            <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Vests'}</a>
-                            </li>
-                            <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Winter Jackets '}</a>
-                            </li>
-                            <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Down Jackets '}</a>
-                            </li>
-                            <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Parkas '}</a>
+                                <a className={menuItem}>{' Save the Arctic Fox '}</a>
                             </li>
                         </ul>
                     </li>
                     <li className={headerSubNavItem}>
-                        <a className={menuItem}>Trousers</a>
+                        <a className={menuItem}>Backpacks & bags</a>
                         <ul className={headerSubNav13}>
                             <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Trekking Trousers '}</a>
+                                <a className={menuItem}>{' Daypacks '}</a>
                             </li>
                             <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Outdoor Trousers '}</a>
+                                <a className={menuItem}>{' Laptop Bags '}</a>
                             </li>
                             <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Shorts '}</a>
+                                <a className={menuItem}>{' Shoulder Bags '}</a>
                             </li>
                             <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Shell Trousers '}</a>
+                                <a className={menuItem}>{' Trekking Backpacks '}</a>
                             </li>
                             <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Hunting Trousers '}</a>
+                                <a className={menuItem}>{' Hunting Backpacks '}</a>
                             </li>
                             <li className={headerSubNavItem}>
                                 <a className={menuItem}>{' Mountaineering Trousers '}</a>
                             </li>
                             <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Trekking Tights '}</a>
+                                <a className={menuItem}>{' Mountaineering Backpacks '}</a>
                             </li>
                             <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Base Layer Bottoms '}</a>
+                                <a className={menuItem}>{' Hip Packs '}</a>
                             </li>
                             <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Insulated Trousers '}</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li className={headerSubNavItem}>
-                        <a className={menuItem}>Tops</a>
-                        <ul className={headerSubNav13}>
-                            <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' T-Shirts & Tank Tops '}</a>
-                            </li>
-                            <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Shirts '}</a>
-                            </li>
-                            <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Sweaters & Knitwear '}</a>
-                            </li>
-                            <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Fleece '}</a>
-                            </li>
-                            <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Base Layer Tops '}</a>
+                                <a className={menuItem}>{' Travel Bags '}</a>
                             </li>
                         </ul>
                     </li>
@@ -101,16 +60,30 @@ export default (props) => {
                         <a className={menuItem}>Accessories</a>
                         <ul className={headerSubNav13}>
                             <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Caps, Hats & Beanies '}</a>
+                                <a className={menuItem}>{' Backpack & Bag Accessories '}</a>
                             </li>
                             <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Belts & Braces '}</a>
+                                <a className={menuItem}>{' Wallets & Small Bags '}</a>
                             </li>
                             <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Care Products '}</a>
+                                <a className={menuItem}>{' Travel Accessories '}</a>
                             </li>
                             <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Other Accessories '}</a>
+                                <a className={menuItem}>{' Hunting Accessories '}</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li className={headerSubNavItem}>
+                        <a className={menuItem}>Tents & sleeping bags</a>
+                        <ul className={headerSubNav13}>
+                            <li className={headerSubNavItem}>
+                                <a className={menuItem}>{' Tents '}</a>
+                            </li>
+                            <li className={headerSubNavItem}>
+                                <a className={menuItem}>{' Tent Accessories '}</a>
+                            </li>
+                            <li className={headerSubNavItem}>
+                                <a className={menuItem}>{' Sleeping Bags'}</a>
                             </li>
                         </ul>
                     </li>

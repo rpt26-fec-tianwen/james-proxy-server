@@ -25,7 +25,7 @@ app.use('*', (req, res, next) => {
     console.info('\u001b[1;35m~componentDidMount Melissa~');
   } else if (req.query.service === 'details' && req.query.indicator !== 'activity') {
     console.info('\u001b[1;35m~componentDidMount James~');
-  } 
+  }
   next();
 });
 
@@ -41,7 +41,7 @@ app.use(/(bundle)?/, bundleRouter);
 
 app.use('/', router);
 
-const port = 8000;
+const port = 8005;
 app.listen(port, () => {
   console.log(`App is listening on port ${port}`)
 })

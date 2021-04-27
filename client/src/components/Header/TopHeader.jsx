@@ -2,7 +2,7 @@ import React from 'react';
 
 const TopNavigationContainer = (props) => {
   const { styles } = props;
-  const {skipLink, topNavigationRoot, topNavigationContainer, topNavigationMessage, topNavigationNav, linkRoot, linkIcon, locatorLinkIcon, regionCountry, topNavigation, flagIcon, flagIconUs, regionCountryFlag, regionCountryTitle, regionCountryCurrency, arrowLinkIcon, regionTopNavLangSelect } = styles;
+  const {skipLink, topNavigationRoot, topNavigationContainer, topNavigationMessage, topNavigationNav, linkRoot, linkIcon, locatorLinkIcon, regionCountry, topNavigation, flagIcon, flagIconUs, regionCountryFlag, regionCountryTitle, regionCountryCurrency, arrowLinkIcon, regionTopNavLangSelect, freeShipping } = styles;
   return (
     <div className={topNavigationRoot}>
       <a className={skipLink}></a>
@@ -12,7 +12,7 @@ const TopNavigationContainer = (props) => {
         <p className={topNavigationMessage}></p>
         <div style={{ textAlign: 'center' }}>
           <strong>
-            <a title="Free Shipping">
+            <a className={freeShipping} title="Free Shipping">
               Free Shipping over $75
         </a>
           </strong>
@@ -22,7 +22,7 @@ const TopNavigationContainer = (props) => {
         <nav className={topNavigationNav}>
           <a className={linkRoot}>
             <img className={linkIcon} src='./images/organic.webp' />
-            <span>Sustainability</span>
+            <span className={freeShipping}>Sustainability</span>
           </a>
           <a className={linkRoot}>
             <svg className={locatorLinkIcon} xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'>
@@ -31,7 +31,7 @@ const TopNavigationContainer = (props) => {
               <path d='M14,14h0L7.69,26.31,20,20h0L26,8,14,14Zm-1.69,7.69,3.18-6.2,3,3Z'></path>
               <path d='M5,18H1a1,1,0,0,1,0-2H5a1,1,0,0,1,0,2Z'></path>
             </svg>
-            <span>Store Locator</span>
+            <span className={freeShipping}>Store Locator</span>
           </a>
 
           <a className={linkRoot} onClick={() => {document.getElementsByTagName('html')[0].style.marginTop = '513px'}}>
@@ -39,7 +39,7 @@ const TopNavigationContainer = (props) => {
               <span className={`${flagIcon} ${flagIconUs} ${regionCountryFlag}`}>
               </span>
               <span>
-                <span className={regionCountryTitle}>
+                <span className={`${regionCountryTitle} ${freeShipping}`}>
                   {" United States "}
                 <span className={regionCountryCurrency}>
                      | $
@@ -54,7 +54,7 @@ const TopNavigationContainer = (props) => {
           </a>
 
           <span className={linkRoot}>
-            <select className={regionTopNavLangSelect}>
+            <select className={`${regionTopNavLangSelect} ${freeShipping}`}>
               <option>English (United States)</option>
             </select>
             <svg xmlns="http://www.w3.org/2000/svg" className={arrowLinkIcon} viewBox="0 0 21.24 34">
@@ -64,7 +64,7 @@ const TopNavigationContainer = (props) => {
           </span>
 
           <a className={linkRoot}>
-            <span>My account</span>
+            <span className={freeShipping}>My account</span>
             <svg xmlns="http://www.w3.org/2000/svg" className={arrowLinkIcon} viewBox="0 0 21.24 34">
               <path d='M3,34a3,3,0,0,1-2.12-.88,3,3,0,0,1,0-4.24L12.76,17,.88,5.12A3,
                           3,0,0,1,5.12.88L21.24,17,5.12,33.12A3,3,0,0,1,3,34Z'></path>

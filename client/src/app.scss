@@ -433,6 +433,7 @@ a:not([class]) {
           cursor: pointer;
           padding-right: 14px;
           z-index: 2;
+          font-family: "Artic Fox";
         }
         .arrowLinkIcon {
           width: 6px;
@@ -611,7 +612,7 @@ a:not([class]) {
       margin-right: 20px;
       & > a {
         padding-top: 15px;
-        padding-bottom: 15px;
+        margin-bottom: 15px;
       }
       & > a {
         position: relative;
@@ -626,12 +627,19 @@ a:not([class]) {
       & > a:after {
         bottom: 15px;
         position: absolute;
+        bottom: 0;
         left: 50%;
         display: block;
         width: 60%;
         height: 2px;
         background-color: #cc1618;
+        content: "";
+        -webkit-transform: translate(-50%) scaleX(0);
         transform: translate(-50%) scaleX(0);
+        -webkit-transition: -webkit-transform 0.3s ease-out;
+        transition: -webkit-transform 0.3s ease-out;
+        transition: transform 0.3s ease-out;
+        transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
       }
       .menuItem {
         display: block;
@@ -727,6 +735,12 @@ a:not([class]) {
             -ms-flex-pack: center;
             justify-content: center;
 
+            //custom styles
+            position: relative;
+            left: 100px;
+            top: 80px;
+            height: 450px;
+
             .headerSubNavItem {
               display: -webkit-box;
               display: -ms-flexbox;
@@ -744,6 +758,7 @@ a:not([class]) {
               //
               text-align: left;
               vertical-align: top;
+
               & > a {
                 display: block;
                 padding: 0 10px;
@@ -809,7 +824,7 @@ a:not([class]) {
     text-align: left;
     vertical-align: top;
     display: inline-block;
-    opacity: 0;
+    // opacity: 0;
     -webkit-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
     -webkit-transition-property: opacity;
@@ -829,8 +844,9 @@ a:not([class]) {
     }
 
     .menuItem {
-      padding-top: 4px;
-      padding-bottom: 4px;
+      padding-top: 4px !important;
+      padding-bottom: 4px !important;
+      font-weight: initial !important;
     }
   }
 }
@@ -843,6 +859,7 @@ a:not([class]) {
   position: relative;
   z-index: 2;
   display: inline-block;
+  margin-bottom: 15px;
   padding: 6px 10px 5px 25px;
   margin-left: 25px;
   background-color: transparent;
@@ -1396,14 +1413,15 @@ a:not([class]) {
 
 .helpButton {
   position: fixed;
-  right: 0px;
   font-size: 1rem;
   color: #fff;
   fill: #fff;
   letter-spacing: 0.4;
-  padding: 0.92857rem 1.57143rem;
+  // padding: 0.92857rem 1.57143rem;
+  padding: 12.5px 22.5px;
   border-radius: 999rem;
-  bottom: 0;
+  bottom: 15px;
+  right: 15px;
   border: none;
   font-weight: 700;
   background-color: #b71f1f;
@@ -1414,6 +1432,8 @@ a:not([class]) {
     padding-right: 0.57143rem;
   }
   .helpButtonSecondSpan {
+    position: relative;
+    bottom: 5px;
     vertical-align: middle;
     padding: 0;
     color: inherit !important;
@@ -2108,4 +2128,145 @@ a:not([class]) {
 
 .ccDiscover {
   background-image: url("images/CCImages/discover_logo.webp");
+}
+
+.kids {
+  display: block !important;
+  left: 665px !important;
+}
+
+#kidsX {
+  height: 125px;
+  ul {
+    top: 20px;
+  }
+}
+
+#ourAdventuresX {
+  height: 200px;
+  ul {
+    top: 20px;
+  }
+}
+
+.freeShipping:hover {
+  color: #cc1618;
+}
+
+.ourAdventures {
+  display: block !important;
+  left: 475px !important;
+}
+
+.jsBorderBottom {
+  border-bottom: 2px solid #cc1618;
+}
+
+.flagRoot {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  pointer-events: none;
+  -webkit-transition: 0.3s ease-in-out 0.5s;
+  transition: 0.3s ease-in-out 0.5s;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 6;
+  .flagOverlay {
+    position: fixed;
+    top: 50%;
+    left: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80vw;
+    max-width: 1185px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    pointer-events: auto;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    -webkit-transition-property: left, -webkit-transform;
+    transition-property: left, -webkit-transform;
+    transition-property: left, transform;
+    transition-property: left, transform, -webkit-transform;
+
+    @media only screen and (min-width: 992px) {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+    }
+
+    .flagClose {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
+      background-image: url("images/x.svg");
+      background-position: 50%;
+      background-size: 10px;
+      cursor: pointer;
+      -webkit-transition: -webkit-transform 0.2s ease-in-out;
+      transition: -webkit-transform 0.2s ease-in-out;
+      transition: transform 0.2s ease-in-out;
+      transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+    }
+    .flagToggle {
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      .flagLabel {
+        position: absolute;
+        top: 70%;
+        right: 100%;
+        overflow: hidden;
+        width: 0;
+        background-color: #e8e7e6;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4NCiAgPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIC8+DQo8L3N2Zz4NCg==);
+        background-position: 15px;
+        background-size: 15px;
+        line-height: 35px;
+        -webkit-transition: 0.2s ease-in-out;
+        transition: 0.2s ease-in-out;
+        -webkit-transition-property: width, padding;
+        transition-property: width, padding;
+        white-space: nowrap;
+      }
+      .flagFlag {
+        position: absolute;
+        top: 70%;
+        left: 0;
+        display: block;
+        width: 35px;
+        height: 60px;
+        background-image: url("images/FlagIcons/flagIconSE.svg");
+        background-size: 100% auto;
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+      }
+    }
+  }
 }

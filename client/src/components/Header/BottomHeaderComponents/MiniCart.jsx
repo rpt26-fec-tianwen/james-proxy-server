@@ -4,7 +4,6 @@ const MiniCart = (props) => {
     const { style } = props;
     const { miniCart, headerCart, headerCartIcon, headerSearchX, headerCartAmount, headerCartText, cartOpen, cartOpenCart } = style;
     const [miniCartHeader, toggleMiniCartHeader] = useState(false);
-
     return (
         <div className={miniCart} onClick={() => {
             if (document.getElementById('cartRoot').classList.contains(cartOpen) || document.getElementById('cartRoot').classList.contains('cartOpen')) {
@@ -26,9 +25,9 @@ const MiniCart = (props) => {
                 miniCartHeader === false ?
                     <span className={headerCart}>
                         <span className={headerCartIcon}></span>
-                        <span className={headerCartAmount}>0</span>
+                        <span className={headerCartAmount} id='headerCartAmount'>0</span>
                         <span className={headerCartText}>
-                            <span>$0.00</span>
+                            <span>$<span id='miniCartAmount'>0.00</span></span>
                         </span>
                     </span>
                     :

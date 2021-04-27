@@ -8,9 +8,9 @@ export default (props) => {
     const { ccVisa, ccMC, ccAmex, ccDiscover } = style;
     const [product, setProduct] = useState({});
     const [multiplier, setMultiplier] = useState(1);
-    
-    useEffect(async() => {
-        const productId = window.location.href.split('').filter(char => {return (Number(char) || char === '0')}).join('');
+
+    useEffect(async () => {
+        const productId = window.location.href.split('').filter(char => { return (Number(char) || char === '0') }).join('') || 1;
         const results = await axios(`/cartImage/${productId}`);
         setProduct(results.data);
     }, [])
@@ -21,51 +21,60 @@ export default (props) => {
                 <div className={cartWrapper}>
                     <span className={cartTitle}>Your shopping cart</span>
                     {product.title ?
-                    <ul className={productListRoot}>
-                        {/* {
+                        <ul className={productListRoot}>
+                            {/* {
                             mapper.map((product) => {
                                 return ( */}
-                                    <li className={productListItem}>
-                                        <span className={productListRemove} onClick={() => {
-                                            setProduct({})
-                                        }}></span>
-                                        <a className={productListImage} href=''>
-                                            <img crossOrigin='true' src={product.urls ? JSON.parse(product.urls)[0] : null}/>
-                                        </a>
-                                        <div className={productListWrapper}>
-                                            <a href='' className={productListTitle}>{product.title}</a>
-                                            <div className={productListContent}>
-                                                <div className={productListInfo}>
-                                                    <div className={productListColor}>
-                                                        <span>{product.colors ? Math.floor(Math.random() * 1000) + ' - ' + JSON.parse(product.colors)[0] : null}</span>
-                                                        <span className={productListColorCode} style={{ backgroundColor: product.colors ? JSON.parse(product.colors)[0] : null }}></span>
-                                                    </div>
-                                                    <div>
-                                                        <span>L</span>
-                                                    </div>
-                                                </div>
-                                                <div className={`${selectRoot} ${productListSelect}`}>
-                                                    <select className={selectSelect} onChange={(event) => {setMultiplier(event.target.value)}}>
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                        <option value="5">5</option>
-                                                        <option value="6">6</option>
-                                                        <option value="7">7</option>
-                                                        <option value="8">8</option>
-                                                        <option value="9">9</option>
-                                                        <option value="10">10</option>
-                                                    </select>
-                                                </div>
-                                                <span className={productListPrice}>{`$${(product.price * multiplier).toFixed(2)}`}</span>
+                            <li className={productListItem}>
+                                <span className={productListRemove} onClick={() => {
+                                    setProduct({})
+                                    document.getElementById('miniCartAmount').innerHTML = '0.00'
+                                    document.getElementById('headerCartAmount').innerHTML = 0;
+                                }}></span>
+                                <a className={productListImage} href=''>
+                                    <img crossOrigin='true' src={product.urls ? JSON.parse(product.urls)[0] : null} />
+                                </a>
+                                <div className={productListWrapper}>
+                                    <a href='' className={productListTitle}>{product.title}</a>
+                                    <div className={productListContent}>
+                                        <div className={productListInfo}>
+                                            <div className={productListColor}>
+                                                <span>{product.colors ? Math.floor(Math.random() * 1000) + ' - ' + JSON.parse(product.colors)[0] : null}</span>
+                                                <span className={productListColorCode} style={{ backgroundColor: product.colors ? JSON.parse(product.colors)[0] : null }}></span>
+                                            </div>
+                                            <div>
+                                                <span>L</span>
                                             </div>
                                         </div>
-                                    </li>
-                                {/* )
+                                        <div className={`${selectRoot} ${productListSelect}`}>
+                                            <select className={selectSelect} onChange={
+                                                (event) => {
+                                                    let initial = Number(document.getElementById('miniCartAmount').innerHTML) / multiplier;
+                                                    setMultiplier(event.target.value)
+                                                    let result = (initial * event.target.value).toFixed(2);
+                                                    document.getElementById('miniCartAmount').innerHTML = result;
+                                                    document.getElementById('headerCartAmount').innerHTML = event.target.value;
+                                                }}>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            </select>
+                                        </div>
+                                        <span className={productListPrice}>{`$${(product.price * multiplier).toFixed(2)}`}</span>
+                                    </div>
+                                </div>
+                            </li>
+                            {/* )
                             })
                         } */}
-                    </ul> : null}
+                        </ul> : null}
                     <dl className={totalsRoot}>
                         <dt>Shipping calculated at checkout</dt>
                         <dd></dd>

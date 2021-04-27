@@ -4,7 +4,7 @@ export default (props) => {
     const { style } = props;
     const { headerSubNav, headerSubNavHolder, headerSubNav12, headerSubNav13, headerSubNavItem, menuItem, headerFeature } = style;
     return (
-        <div className={headerSubNav} id='menSubNav'>
+        <div className={headerSubNav} id='womenSubNav'>
             <div className={headerSubNavHolder} >
                 <ul className={headerSubNav12} >
                     <li className={headerSubNavItem}>
@@ -55,13 +55,10 @@ export default (props) => {
                                 <a className={menuItem}>{' Outdoor Trousers '}</a>
                             </li>
                             <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Shorts '}</a>
+                                <a className={menuItem}>{' Shorts & Skirts '}</a>
                             </li>
                             <li className={headerSubNavItem}>
                                 <a className={menuItem}>{' Shell Trousers '}</a>
-                            </li>
-                            <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Hunting Trousers '}</a>
                             </li>
                             <li className={headerSubNavItem}>
                                 <a className={menuItem}>{' Mountaineering Trousers '}</a>
@@ -71,9 +68,6 @@ export default (props) => {
                             </li>
                             <li className={headerSubNavItem}>
                                 <a className={menuItem}>{' Base Layer Bottoms '}</a>
-                            </li>
-                            <li className={headerSubNavItem}>
-                                <a className={menuItem}>{' Insulated Trousers '}</a>
                             </li>
                         </ul>
                     </li>
@@ -94,6 +88,9 @@ export default (props) => {
                             </li>
                             <li className={headerSubNavItem}>
                                 <a className={menuItem}>{' Base Layer Tops '}</a>
+                            </li>
+                            <li className={headerSubNavItem}>
+                                <a className={menuItem}>{' Dresses '}</a>
                             </li>
                         </ul>
                     </li>
