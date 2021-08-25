@@ -3,7 +3,6 @@ import React from 'react';
 const FjakeravenLogo = (props) => {
     const { style, x } = props;
     const { headerLogo, letters, footerLogo } = style;
-    console.log(footerLogo);
     return (
         <a className={x ? footerLogo : headerLogo}>
             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 247.6 86.8' preserveAspectRatio='xMinYMid meet'>

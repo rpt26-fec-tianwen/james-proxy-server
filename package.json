@@ -1,8 +1,8 @@
 {
-  "name": "",
+  "name": "Fjakeraven Proxy Server",
   "version": "",
   "description": "",
-  "author": "",
+  "author": "James Hrivnak",
   "license": "",
   "engines": {
     "node": ">=6.13.0"
